@@ -8,7 +8,7 @@ public class PracticeProblem {
 			char key = characters[i];
 			int index = i -1;
 
-			while (index >= 0 && Character.toLowerCase(characters[index]) > Character.toLowerCase(key)) {
+			while (index >= 0 && (Character.toLowerCase(characters[index]) > Character.toLowerCase(key) || (Character.toLowerCase(characters[index]) == Character.toLowerCase(key) && characters[index] > key))) {
 				characters[index + 1] = characters[index];
 				index--;
 			}
